@@ -1,0 +1,198 @@
+/* General styles */
+body {
+    background: #181818;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container for the game */
+.game-container {
+    background: #23272f;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    padding: 32px 40px;
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 340px;
+}
+
+/* Title styling */
+h1, .game-title {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+    color: #00bcd4;
+    text-align: center;
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+}
+
+.score {
+    background: grey;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin: 0 8px;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Game area */
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Buttons */
+button, .game-btn {
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 8px 0;
+    transition: background 0.2s;
+}
+
+button:hover, .game-btn:hover {
+    background: #0097a7;
+}
+
+/* Input fields */
+input[type="text"], input[type="number"] {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    width: 220px;
+    box-sizing: border-box;
+}
+
+/* Messages */
+.message, .game-message {
+    margin: 16px 0;
+    font-size: 1.1rem;
+    min-height: 24px;
+    color: #ffd600;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .game-container {
+        padding: 16px 6px;
+        min-width: unset;
+        width: 98vw;
+    }
+    .scoreboard {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+}
+
+
+/* .number {
+    font-family: 'Press Start 2P', 'VT323', 'Share Tech Mono', 'Courier New', Courier, monospace;
+    font-size: 10rem;
+    color: #fff;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 #000,
+        0 0 0 #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+} */
+
+/* .number {
+  font-size: 6rem;
+  color: #ffffff;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 32px;
+  width: 120px;
+  margin: 0 auto 24px;
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+  box-shadow:
+    0 0 20px rgba(0, 229, 255, 0.6),
+    0 0 40px rgba(0, 229, 255, 0.4),
+    inset 0 0 12px rgba(0, 229, 255, 0.3);
+  transition: 0.3s ease-in-out;
+} */
+
+.number {
+  font-size: 6rem;
+  color: black;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 32px;
+  width: 120px;
+  margin: 0 auto 24px;
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.15),
+    inset 0 0 8px rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+
+
+body::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 220px; /* Adjust as needed to perfectly intersect .number */
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 670px; /* Adjust based on how low your scoreboard is */
+  height: 50px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  pointer-events: none;
+}
